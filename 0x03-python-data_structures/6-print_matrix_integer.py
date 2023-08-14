@@ -5,5 +5,5 @@ def print_matrix_integer(matrix=[[]]):
         for b in range(len(matrix[a])):    #from 0 to lenght of elements in sub list
             if b != 0:
                 print(" ", end='')  #creates space when it's not first element
-            print("{:d}".format(b), end='')
+            print("{:d}".format(matrix[a][b]), end='')
         print() #creates newline
