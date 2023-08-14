@@ -2,9 +2,9 @@
 
 def print_matrix_integer(matrix=[[]]):
     """Function that prints a matrix of integers"""
-    for a in range(len(matrix)):    #from 0 to length of elements in list
-        for b in range(len(matrix[a])):    #from 0 to lenght of elements in sub list
-            if b == 2:
-                print("{:d}".format(matrix[a][b]), end='')  #creates space after printing element
-            print("{:d}".format(matrix[a][b]), end=' ')    #removes space for last element
-        print() #creates newline
+    for a in range(len(matrix)):
+        for b in range(len(matrix[a])):
+            print("{:d}".format(matrix[a][b]), end='')
+            if b != len(matrix[a]) - 1:
+                print(" ", end='')  # creates space after printing element (except for the last)
+        print()  # creates newline
