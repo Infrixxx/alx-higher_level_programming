@@ -1,2 +1,16 @@
 #!/bin/bash
-python3 -m compileall -b $PYFILE i
+
+# Check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+    echo "PYFILE environment variable is not set."
+    exit 1
+fi
+
+# Compile the Python script
+python3 -m compileall "$PYFILE"
+
+# Rename the compiled file to include 'c' at the end
+mv "__pycache__/${PYFILE%.py}.cpython-*.pyc" "${PYFILE%.py}c.pyc"
+
+# Remove the __pycache__ directory
+rm -r __pycache__
