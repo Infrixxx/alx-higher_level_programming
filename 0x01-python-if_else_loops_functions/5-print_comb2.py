@@ -4,8 +4,8 @@ while n <= 99:
     if n < 99:
         a = n // 10
         b = n%10
-        print(f"{a:d}{b:d}",end=', ')
+        print("{:d}{:d}".format(a,b),end=', ')
         n += 1
     else:
-        print(f"{n:d}")
+        print("{:d}".format(n))
         break
