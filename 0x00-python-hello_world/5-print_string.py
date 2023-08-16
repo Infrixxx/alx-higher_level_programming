@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 str = "Holberton School"
-for i in range(4):
+for i in range(3):
     print(str,end='')
 print()
-print(str[0:8])
+print(str[0:9])
